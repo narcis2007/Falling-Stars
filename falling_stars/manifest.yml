@@ -1,0 +1,21 @@
+---
+applications:
+- name: fallingStars
+  memory: 512M
+  disk_quota: 300M
+  instances: 1
+  path: target/falling-stars-1.0.0-SNAPSHOT.jar
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 20}]'
+    JAVA_OPTS: '-XX:ReservedCodeCacheSize=64M -Xss512k'
+    BITGO_AUTHORIZATION_TOKEN: v2x7ea3517cbcb522c1895ecf3046ef66953b4c74462753d2c17f0cfd53be94b451
+    BITGO_EXPRESS_HOST: https://bitgoexpress.cfapps.io
+    BITGO_HOST: https://test.bitgo.com
+    HOST: https://falling-stars.cfapps.io
+    MAIN_WALLET_ADDRESS: 2N5ZCmpeRpngRKkMQi53dogc9fUjtpStFks
+    MAIN_WALLET_PASSPHRASE: Testpass1.Testpass1.
+    SPRING_PROFILES_ACTIVE: cloud
+  services:
+      - falling_stars_db
+      
+  buildpack: https://github.com/cloudfoundry/java-buildpack

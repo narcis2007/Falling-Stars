@@ -1,0 +1,58 @@
+<section id="single-element">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="form">
+
+
+                    <form [formGroup]="addAdvertisementForm">
+                        <div *ngIf="message"  class="alert error">
+                            <span class="closebtn" (click)="clearErrorAlert()">&times;</span>
+                            {{message}}
+                        </div>
+                        <!--<div>-->
+                            <!--<sk-cube-grid [isRunning]="isRunning" ></sk-cube-grid>-->
+                        <!--</div>-->
+                        <input class="form-control" [formControl]="addAdvertisementForm.controls['text']" type="text" name="text"
+                               placeholder="text" required>
+                        <div class="alert warning" *ngIf="addAdvertisementForm.controls['text'].hasError('required')&&addAdvertisementForm.controls['text'].touched">
+                            Text is required!
+                        </div>
+                        <!--must add validation for url-->
+                        <input class="form-control" [formControl]="addAdvertisementForm.controls['url']" type="text" name="url"
+                               placeholder="Url" required> <!--change to url type in the future-->
+                        <div class="alert warning" *ngIf="addAdvertisementForm.controls['url'].hasError('invalidUrl')&&addAdvertisementForm.controls['url'].touched">
+                            You must provide a valid url!
+                        </div>
+                        <div class="input-group">
+                            <input class="form-control" [(ngModel)]="keyWord" [ngModelOptions]="{standalone: true}" (focusout)="touchKeyWord()" type="text" name="keyWord"
+                                   placeholder="keyWord" required>
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" [disabled]="keyWord==null"
+                                            (click)="addKeyWord()"
+                                            id="addKeyWordButton"
+                                            name="addKeyWordButton" value="Add keyWord">Add</button>
+                            </span>
+                        </div>
+                        <div class="alert warning" *ngIf="addAdvertisementForm.controls['keyWords'].hasError('required')&&keyWordTouched">
+                            A keyword is required!
+                        </div>
+                        <div *ngIf="keyWords!=null">
+                            <br>
+                            <p>KeyWords:</p>
+                            <ul>
+                                <li *ngFor="let kw of keyWords">
+                                    {{ kw }}
+                                </li>
+                            </ul>
+                        </div>
+                        <input class="form-control" [disabled]="!addAdvertisementForm.valid" (click)="addLinkAdvertisement()" type="submit"
+                               id="addLinkButton"
+                               name="addLink" value="Add Advertisement">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

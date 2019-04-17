@@ -1,0 +1,42 @@
+<section id="single-element">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="form">
+                        <form [formGroup]="loginForm">
+                            <div *ngIf="message"  class="alert error"><!--might be a good ideea to make a component for this-->
+                                <span class="closebtn" (click)="clearErrorAlert()">&times;</span>
+                                {{message}}
+                            </div>
+
+                            <div>
+                                <sk-cube-grid [isRunning]="isRunning" ></sk-cube-grid>
+                            </div>
+
+                            <input class="form-control" [formControl]="loginForm.controls['username']" type="text" name="username" placeholder="Username" required>
+
+                            <div class="alert warning" *ngIf="loginForm.controls['username'].hasError('required')&&loginForm.controls['username'].touched">
+                                Username is required!
+                            </div>
+
+                            <input class="form-control" [formControl]="loginForm.controls['password']" type="password" name="password" placeholder="Password" required>
+
+                            <div class="alert warning" *ngIf="loginForm.controls['password'].hasError('required')&&loginForm.controls['password'].touched">
+                                Password is required!
+                            </div>
+
+                            <a class="floatRight" (click)="forgotPasswordRedirect()" >Forgot password?</a>
+
+                            <label>Remember me</label>
+                            <input (click)="toggleRememberMe()" type="checkbox">
+
+                            <input class="form-control" [disabled]="!loginForm.valid" (click)="login()" type="submit" id="loginButton" name="Sign In" value="Log In">
+                            <a (click)="registerRedirect()" >Don't have an account?</a>
+
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>

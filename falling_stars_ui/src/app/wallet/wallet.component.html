@@ -1,0 +1,54 @@
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="center" >
+                    <h2>My Wallet</h2>
+                </div>
+                <sk-cube-grid [isRunning]="isRunning"></sk-cube-grid>
+                <div class="post-thumb" *ngIf="wallet!=null">
+                    <div class="post-description">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Wallet Address</th>
+                                <th>Availabe Clicks</th>
+                                <th>Paid Clicks</th>
+                                <th>Advertisements Click Count</th>
+                                <th>Websites Click Count</th>
+                                <th>Satoshi Available</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>{{wallet.address}}</td>
+                                <td>{{wallet.availableClicks}}</td>
+                                <td>{{wallet.paidClicks}}</td>
+                                <td>{{wallet.advertisementsClickCount}}</td>
+                                <td>{{wallet.websitesClickCount}}</td>
+                                <td>{{wallet.amountThatCanBeWithdrawed | number }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="center" >
+                        <h2>Withdraw Bitcoins</h2>
+                    </div>
+
+                    <div class="form">
+
+                        <form [formGroup]="withdrawnForm">
+                            <div *ngIf="message"  class="alert error">
+                                <span class="closebtn" (click)="clearErrorAlert()">&times;</span>
+                                {{message}}
+                            </div>
+                            <input class="form-control" [formControl]="withdrawnForm.controls['address']" type="text" name="address" placeholder="Address" required>
+                            <input class="form-control" [disabled]="!withdrawnForm.valid" (click)="withdraw()" type="submit" id="withdrawnButton" name="Withdraw"
+                                   value="withdraw">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

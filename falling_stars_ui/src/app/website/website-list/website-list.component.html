@@ -1,0 +1,38 @@
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="center" >
+                    <h2 >Registered Websites</h2>
+                </div>
+                <div class="post-thumb" *ngFor="let website of websites">
+                    <div class="post-title">
+                        <h3><a (click)="viewWebsite(website)" >{{ website.name }}</a></h3>
+                    </div>
+                    <div class="post-description">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Max Words</th>
+                                <th>Click Count</th>
+                                <th>Script</th>
+                                <th>Key Words</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>{{ website.maxWords}}</td>
+                                <td>{{ website.clickCount}}</td>
+                                <td>{{getScriptHtml(website)}}</td>
+                                <td>
+                                    <span *ngFor="let keyWord of website.keyWords">{{ keyWord }}, </span>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

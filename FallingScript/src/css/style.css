@@ -1,0 +1,23 @@
+.visible {
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+a{
+    color:green;
+}
+
+div.iframe-link {
+    display: none;
+    width: 100%;
+}
+a.iframe-link {
+    text-decoration:none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:500px;
+    height:500px;
+}

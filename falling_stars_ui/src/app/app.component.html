@@ -1,0 +1,29 @@
+<!-- Navigation section  -->
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <a (click)='redirectPresentationPage()' class="navbar-brand">{{title}}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li class="active"><a (click)='redirectPresentationPage()'>Home</a></li>-->
+                <li><a *ngIf="configService.isLogged()" (click)='redirectAddAdvertisement()' >AddAdvertisement</a></li>
+                <li><a *ngIf="configService.isLogged()" (click)='redirectRegisterWebsite()'>RegisterWebsite</a></li>
+                <li><a *ngIf="configService.isLogged()" (click)='redirectWebsitesList()'>MyWebsites</a></li>
+                <li><a *ngIf="configService.isLogged()" (click)='redirectAdvertisementList()'>MyAdvertisements</a></li>
+                <li><a *ngIf="configService.isLogged()" (click)='redirectWallet()'>Wallet</a></li>
+                <li><a *ngIf="configService.isLogged()" (click)='redirectLogout()'>Logout</a></li>
+                <li><a *ngIf="!configService.isLogged()" (click)='redirectLogin()'>Login</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

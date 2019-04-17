@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1800.625" y="218.0">falling.stars.service.UserService</node>
+    <node x="282.0" y="109.0">falling.stars.service.WebsiteService</node>
+    <node x="600.4375" y="0.0">falling.stars.repository.ClickDetailRepository</node>
+    <node x="481.4375" y="0.0">falling.stars.model.ClickStats</node>
+    <node x="981.4375" y="0.0">falling.stars.repository.WalletRepository</node>
+    <node x="19.0" y="0.0">falling.stars.model.hibernate.Animation</node>
+    <node x="309.0" y="0.0">falling.stars.repository.WebsiteRepository</node>
+    <node x="967.875" y="297.0">falling.stars.rest.ScriptConfigurationController</node>
+    <node x="1276.60703125" y="0.0">falling.stars.model.AdvertisementStatus</node>
+    <node x="1090.7015625" y="109.0">falling.stars.service.AdvertisementService</node>
+    <node x="161.5" y="0.0">falling.stars.model.hibernate.Advertisement</node>
+    <node x="1636.125" y="297.0">falling.stars.rest.UserController</node>
+    <node x="1948.125" y="109.0">falling.stars.model.User</node>
+    <node x="1329.375" y="109.0">falling.stars.model.Authorization</node>
+    <node x="1107.23203125" y="218.0">falling.stars.rest.ClickDetailController</node>
+    <node x="1361.625" y="218.0">falling.stars.service.AuthService</node>
+    <node x="1325.875" y="297.0">falling.stars.rest.AuthController</node>
+    <node x="623.48203125" y="109.0">falling.stars.service.ClickDetailService</node>
+    <node x="0.0" y="109.0">falling.stars.model.hibernate.Website</node>
+    <node x="1727.125" y="109.0">falling.stars.exception.ResourceNotFoundException</node>
+    <node x="110.0" y="109.0">falling.stars.model.ScriptConfiguration</node>
+    <node x="1492.625" y="218.0">falling.stars.model.Response</node>
+    <node x="1603.125" y="0.0">falling.stars.bitcoin.BitcoinWalletClient</node>
+    <node x="1610.625" y="218.0">falling.stars.rest.WalletController</node>
+    <node x="584.46796875" y="218.0">falling.stars.service.ConfigurationService</node>
+    <node x="1589.125" y="109.0">falling.stars.service.WalletService</node>
+    <node x="829.20703125" y="218.0">falling.stars.rest.AdvertisementController</node>
+    <node x="200.5140624999999" y="218.0">falling.stars.rest.WebsiteController</node>
+    <node x="780.4375" y="0.0">falling.stars.repository.AdvertisementRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="falling.stars.service.AdvertisementService" target="falling.stars.repository.WalletRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="1171.7015625" y="59.0" />
+      <point x="1067.0625" y="59.0" />
+      <point x="17.125" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.AuthService" target="falling.stars.service.WalletService">
+      <point x="27.75" y="-14.5" />
+      <point x="1444.875" y="198.0" />
+      <point x="1618.625" y="198.0" />
+      <point x="-29.5" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.ClickDetailController" target="falling.stars.service.ClickDetailService">
+      <point x="-39.25" y="-14.5" />
+      <point x="1146.48203125" y="158.0" />
+      <point x="740.98203125" y="158.0" />
+      <point x="47.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ClickDetailService" target="falling.stars.repository.WebsiteRepository">
+      <point x="-56.39999999999998" y="-14.5" />
+      <point x="637.58203125" y="89.0" />
+      <point x="418.5" y="89.0" />
+      <point x="36.5" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.WalletController" target="falling.stars.service.WalletService">
+      <point x="0.0" y="-14.5" />
+      <point x="29.5" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.AdvertisementController" target="falling.stars.service.ClickDetailService">
+      <point x="-44.5" y="-14.5" />
+      <point x="873.70703125" y="168.0" />
+      <point x="693.98203125" y="168.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ConfigurationService" target="falling.stars.service.AdvertisementService">
+      <point x="59.625" y="-14.5" />
+      <point x="723.59296875" y="188.0" />
+      <point x="1110.9515625" y="188.0" />
+      <point x="-60.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ClickDetailService" target="falling.stars.repository.WalletRepository">
+      <point x="56.39999999999998" y="-14.5" />
+      <point x="750.38203125" y="79.0" />
+      <point x="998.5625" y="79.0" />
+      <point x="-51.375" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.AdvertisementController" target="falling.stars.service.AdvertisementService">
+      <point x="44.5" y="-14.5" />
+      <point x="962.70703125" y="198.0" />
+      <point x="1151.4515625" y="198.0" />
+      <point x="-20.25" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.UserService" target="falling.stars.model.User">
+      <point x="27.0" y="-14.5" />
+      <point x="1881.625" y="198.0" />
+      <point x="1965.875" y="198.0" />
+      <point x="-17.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.AuthController" target="falling.stars.service.AuthService">
+      <point x="0.0" y="-14.5" />
+      <point x="-27.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ConfigurationService" target="falling.stars.repository.WalletRepository">
+      <point x="19.875" y="-14.5" />
+      <point x="683.84296875" y="178.0" />
+      <point x="912.54609375" y="178.0" />
+      <point x="912.54609375" y="89.0" />
+      <point x="1032.8125" y="89.0" />
+      <point x="-17.125" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ClickDetailService" target="falling.stars.repository.ClickDetailRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="693.98203125" y="89.0" />
+      <point x="680.4375" y="89.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.AdvertisementService" target="falling.stars.repository.AdvertisementRepository">
+      <point x="-54.0" y="-14.5" />
+      <point x="1117.7015625" y="69.0" />
+      <point x="916.1875" y="69.0" />
+      <point x="45.25" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.UserController" target="falling.stars.service.UserService">
+      <point x="15.5" y="-14.5" />
+      <point x="1713.625" y="267.0" />
+      <point x="1854.625" y="267.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ConfigurationService" target="falling.stars.model.ScriptConfiguration">
+      <point x="-59.625" y="-14.5" />
+      <point x="604.34296875" y="178.0" />
+      <point x="186.0" y="178.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.WebsiteController" target="falling.stars.service.WebsiteService">
+      <point x="-35.75" y="-14.5" />
+      <point x="236.2640624999999" y="188.0" />
+      <point x="313.75" y="188.0" />
+      <point x="-31.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.UserController" target="falling.stars.model.Response">
+      <point x="-15.5" y="-14.5" />
+      <point x="1682.625" y="267.0" />
+      <point x="1541.625" y="267.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ClickDetailService" target="falling.stars.model.ClickStats">
+      <point x="-28.200000000000045" y="-14.5" />
+      <point x="665.7820312499999" y="79.0" />
+      <point x="530.9375" y="79.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.model.hibernate.Website" target="falling.stars.model.hibernate.Animation">
+      <point x="0.0" y="-14.5" />
+      <point x="-26.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.ScriptConfigurationController" target="falling.stars.service.AdvertisementService">
+      <point x="51.25" y="-14.5" />
+      <point x="1121.625" y="277.0" />
+      <point x="1274.73203125" y="277.0" />
+      <point x="1274.73203125" y="198.0" />
+      <point x="1232.4515625" y="198.0" />
+      <point x="60.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.UserController" target="falling.stars.service.AuthService">
+      <point x="-46.5" y="-14.5" />
+      <point x="1651.625" y="277.0" />
+      <point x="1444.875" y="277.0" />
+      <point x="27.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.model.ScriptConfiguration" target="falling.stars.model.hibernate.Animation">
+      <point x="-38.0" y="-14.5" />
+      <point x="148.0" y="89.0" />
+      <point x="97.0" y="89.0" />
+      <point x="26.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.ClickDetailController" target="falling.stars.service.AdvertisementService">
+      <point x="39.25" y="-14.5" />
+      <point x="1224.98203125" y="198.0" />
+      <point x="1191.9515625" y="198.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.WalletService" target="falling.stars.bitcoin.BitcoinWalletClient">
+      <point x="29.5" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.ScriptConfigurationController" target="falling.stars.service.ConfigurationService">
+      <point x="-51.25" y="-14.5" />
+      <point x="1019.125" y="277.0" />
+      <point x="663.96796875" y="277.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ConfigurationService" target="falling.stars.service.WebsiteService">
+      <point x="-19.875" y="-14.5" />
+      <point x="644.09296875" y="168.0" />
+      <point x="377.25" y="168.0" />
+      <point x="31.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.WebsiteService" target="falling.stars.repository.WebsiteRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="-36.5" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.UserController" target="falling.stars.model.User">
+      <point x="46.5" y="-14.5" />
+      <point x="1744.625" y="277.0" />
+      <point x="2001.375" y="277.0" />
+      <point x="17.75" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.AuthService" target="falling.stars.model.Authorization">
+      <point x="-27.75" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.ClickDetailService" target="falling.stars.repository.AdvertisementRepository">
+      <point x="28.200000000000045" y="-14.5" />
+      <point x="722.18203125" y="69.0" />
+      <point x="825.6875" y="69.0" />
+      <point x="-45.25" y="14.5" />
+    </edge>
+    <edge source="falling.stars.rest.WebsiteController" target="falling.stars.service.ClickDetailService">
+      <point x="35.75" y="-14.5" />
+      <point x="307.7640624999999" y="198.0" />
+      <point x="646.98203125" y="198.0" />
+      <point x="-47.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.WalletService" target="falling.stars.repository.WalletRepository">
+      <point x="-29.5" y="-14.5" />
+      <point x="1618.625" y="49.0" />
+      <point x="1101.3125" y="49.0" />
+      <point x="51.375" y="14.5" />
+    </edge>
+    <edge source="falling.stars.model.ScriptConfiguration" target="falling.stars.model.hibernate.Advertisement">
+      <point x="38.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.AdvertisementService" target="falling.stars.model.AdvertisementStatus">
+      <point x="54.0" y="-14.5" />
+      <point x="1225.7015625" y="89.0" />
+      <point x="1355.10703125" y="89.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="falling.stars.service.UserService" target="falling.stars.exception.ResourceNotFoundException">
+      <point x="-27.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8102941176470588" x="1010.0" y="163.0" />
+  <SelectedNodes>
+    <node>falling.stars.rest.AdvertisementController</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

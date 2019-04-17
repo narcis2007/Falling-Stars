@@ -1,0 +1,101 @@
+<section id="single-element">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="form">
+                    <form [formGroup]="websiteForm">
+                        <div *ngIf="message"  class="alert error">
+                            <span class="closebtn" (click)="clearErrorAlert()">&times;</span>
+                            {{message}}
+                        </div>
+                        <input class="form-control" [formControl]="websiteForm.controls['name']" type="text" name="name"
+                               placeholder="Name" required>
+                        <div class="alert warning" *ngIf="websiteForm.controls['name'].hasError('required')&&websiteForm.controls['name'].touched">
+                            Website name is required!
+                        </div>
+                        <input class="form-control" [formControl]="websiteForm.controls['maxWords']" type="number" name="number"
+                               placeholder="maxWords" required>
+                        <div class="alert warning" *ngIf="websiteForm.controls['maxWords'].hasError('required')&&websiteForm.controls['maxWords'].touched">
+                            The maximum number of words in the advertisement is required!
+                        </div>
+                        <div class="alert warning" *ngIf="websiteForm.controls['maxWords'].hasError('invalidMin')&&websiteForm.controls['maxWords'].touched">
+                            The minimum value is 1!
+                        </div>
+                        <div class="alert warning" *ngIf="websiteForm.controls['maxWords'].hasError('invalidMax')&&websiteForm.controls['maxWords'].touched">
+                            The maximum value is 10!
+                        </div>
+                        <div class="input-group">
+                            <input class="form-control" [(ngModel)]="keyWord" [ngModelOptions]="{standalone: true}"
+                                   (focusout)="touchKeyWord()" type="text"
+                                   name="keyWord"
+                                   placeholder="KeyWord" required>
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" [disabled]="keyWord==null"
+                                            (click)="addKeyWord()"
+                                            id="addKeyWordButton"
+                                            name="addKeyWordButton" value="Add keyWord">Add</button>
+                            </span>
+                        </div>
+
+                        <div class="alert warning" *ngIf="websiteForm.controls['keyWords'].hasError('required')&&keyWordTouched">
+                            A keyword is required!
+                        </div>
+                        <div *ngIf="keyWords!=null">
+                            <br>
+                            <p>KeyWords:</p>
+                            <ul>
+                                <li *ngFor="let kw of keyWords">
+                                    {{ kw }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        In Animation:
+                        <select class="form-control" [formControl]="websiteForm.controls['inAnimation']" >
+                            <option *ngFor="let animation of animations" value={{animation.id}}>{{animation.name}}  </option>
+                        </select>
+
+                        <div class="alert warning" *ngIf="websiteForm.controls['inAnimation'].hasError('required')&&websiteForm.controls['inAnimation'].touched">
+                            In Animation required!
+                        </div>
+
+
+                        Out Animation:
+                        <select class="form-control" [formControl]="websiteForm.controls['outAnimation']" >
+                            <option *ngFor="let animation of animations" value={{animation.id}}>{{animation.name}}  </option>
+                        </select>
+                        <div class="alert warning" *ngIf="websiteForm.controls['outAnimation'].hasError('required')&&websiteForm.controls['outAnimation'].touched">
+                            Out Animation required!
+                        </div>
+                        <input class="form-control" [disabled]="!websiteForm.valid" (click)="addWebsite()" type="submit"
+                               id="addDomainButton"
+                               name="addLink" value="Add Website">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

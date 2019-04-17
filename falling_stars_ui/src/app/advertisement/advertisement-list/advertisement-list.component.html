@@ -1,0 +1,38 @@
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="center" >
+                    <h2 >Registered Advertisements</h2>
+                </div>
+                <div class="post-thumb" *ngFor="let advertisement of advertisements">
+                    <!--<div class="post-title">-->
+                        <!--<h3><a (click)="viewWebsite(website)" >{{ website.name }}</a></h3>-->
+                    <!--</div>-->
+                    <div class="post-description">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Text</th>
+                                <th>Click Count</th>
+                                <th>URL</th>
+                                <th>Key Words</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>{{advertisement.text}}</td>
+                                <td>{{advertisement.clickCount}}</td>
+                                <td>{{advertisement.url}}</td>
+                                <td>
+                                    <span *ngFor="let keyWord of advertisement.keyWords">{{ keyWord }}, </span>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
